@@ -1,0 +1,232 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    font-family: "Leelawadee UI Semilight";
+    height: 100%;
+    background-color: #fefae0;
+    background-image: url(https://images.unsplash.com/photo-1563281577-a7be47e20db9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
+    /*background-size: 100% 120%;*/
+    background-attachment: fixed;
+}
+
+h1 {
+    display: flex;
+    color: #8a633b;
+    justify-content: center;
+    align-items: center;
+}
+
+#addEntry {
+    height: 30px;
+    width: 250px;
+    display: flex;
+    background-image: linear-gradient(to left, #e9edc9, #d4a37367);
+    background-color: #faedcd;
+    border: none;
+    box-sizing: border-box;
+    position: relative;
+    color: #fefae0;
+    transition: 0.2s;
+    box-shadow: rgba(50, 50, 93, 0.25) -5px 5px 27px -5px, rgba(0, 0, 0, 0.3) -5px 3px 16px -8px;
+}
+
+#addEntry:focus {
+    outline: none;
+    background-color: #b78859;
+    transition: 0.3s;
+}
+
+
+#addDiv {
+    width: 600px;
+    height: 60px;
+    display: flex;
+    background-color: #e9edc9;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: rgba(93, 90, 50, 0.25) 0px -13px 27px -5px;
+    border-radius: 2px 2px 0 0;
+}
+
+#addBtn {
+    background-color: #d4a373;
+    color: #8a633b;
+    display: flex;
+    height: 30px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    transition: 0.3s;
+    box-shadow: rgba(93, 92, 50, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    outline: none;
+}
+
+#addBtn:hover {
+    background-color: #ccd5ae;
+}
+
+
+ul {
+    background-color: #e9edc9;
+    width: 600px;
+    height: 25px;
+    padding: 0 0 23px 0;
+    margin-top: 0;
+    list-style: none;
+    box-shadow: rgba(84, 93, 50, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 0 0 2px 2px;
+}
+
+ul li {
+    margin: 0;
+}
+
+.liAdd {
+    background-color: #e9edc9;
+    color: #8a633b;
+    width: 600px;
+    height: 40px;
+    transition: 0.3s;
+    /*top: 120px;
+    position: absolute;*/
+    position: relative;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    user-select: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: append-animate 0.3s ease-out;
+}
+
+.liAdd:hover {
+    background-color: #c9d2ab !important;
+    /* !important agar bisa menindih yang ter set di js */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.liText {
+    pointer-events: none;
+    position: absolute;
+    left: 45px;
+    font-size: 18px;
+}
+
+@keyframes append-animate {
+    from {
+        top: -13px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.openCircle {
+    height: 8px;
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 2px rgb(138, 99, 59);
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: absolute;
+    left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 6px;
+}
+
+.deleteLiBtn {
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    right: 40px;
+    transition: 0.2s;
+
+    box-sizing: border-box;
+    transform: scale(var(--ggs, 1));
+    border: 2px solid rgba(138, 98, 59, 0.753);
+}
+
+.deleteLiBtn::before {
+    color: rgba(138, 98, 59, 0.753);
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 1.5px;
+    width: 5px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 5px;
+    top: 42.5%;
+    left: 17.5%;
+}
+
+.deleteLiBtn:hover {
+    background-color: rgba(138, 98, 59, 0.753);
+}
+
+.arrowNaik {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+.arrowTurun {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+.naik {
+    position: absolute;
+    border: 0 solid black;
+    vertical-align: middle;
+    top: 8.5px;
+    left: 17px;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(-135deg);
+    border-radius: 1px;
+    border-color: rgba(138, 98, 59, 0.753);
+    pointer-events: none;
+}
+
+.turun {
+    position: absolute;
+    border: 0 solid black;
+    vertical-align: middle;
+    bottom: 8.5px;
+    left: 17px;
+    border-width: 2px 0 0 2px;
+    padding: 3px;
+    transform: rotate(-135deg);
+    border-radius: 1px;
+    border-color: rgba(138, 98, 59, 0.753);
+    pointer-events: none;
+}
+
+.arrowNaik:hover {
+    background-image: linear-gradient(to right, #c9d2ab, #d4a373);
+}
+
+.arrowTurun:hover {
+    background-image: linear-gradient(to right, #c9d2ab, #d4a373);
+}
